@@ -16,15 +16,13 @@ function calSum(serial) {
 }
 
 // 정렬
-input.sort();
-input.sort((a, b) => {
+input.sort().sort((a, b) => {
   if (a.trim().length !== b.trim().length) {
     return a.length - b.length;
   }
   if (calSum(a) !== calSum(b)) {
     return calSum(a) - calSum(b);
   }
-  return a - b;
 });
 
 // 출력
