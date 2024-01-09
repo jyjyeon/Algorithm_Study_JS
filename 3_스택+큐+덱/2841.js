@@ -20,7 +20,7 @@ for (let i = 0; i < N; i++) {
 
   let last = arr[note].at(-1);
   while (last > fret) {
-    last = arr[note].pop();
+    arr[note].pop();
     last = arr[note].at(-1);
     ans++;
   }
