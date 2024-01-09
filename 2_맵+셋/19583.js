@@ -8,12 +8,12 @@ end = Number(end.replace(":", "")); //개강총회 끝 시간
 finalEnd = Number(finalEnd.replace(":", "")); //스트리밍 끝 시간
 
 const members = new Set();
-let ans = 0;
+let ans = 0; //출석 확인된 회원 수
 
 for (let i = 0; i < input.length; i++) {
   let [timeString, name] = input[i].trim().split(" ");
   let time = Number(timeString.replace(":", "")); //회원이 채팅한 시간
-  if (time <= start && !members.has(name)) {
+  if (time <= start) {
     //시작전 출석 확인
     members.add(name);
   } else if (end <= time && time <= finalEnd && members.has(name)) {
