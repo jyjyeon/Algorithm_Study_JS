@@ -19,11 +19,13 @@ for (let i = 0; i < N; i++) {
   fret = Number(fret);
 
   let last = arr[note].at(-1);
+  //손가락 떼는 경우
   while (last > fret) {
     arr[note].pop();
     last = arr[note].at(-1);
     ans++;
   }
+  //손가락 누르는 경우
   if (last === undefined || last < fret) {
     arr[note].push(fret);
     ans++;
