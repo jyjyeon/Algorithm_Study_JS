@@ -15,6 +15,7 @@ function swap(idx1, idx2) {
   heap[idx2] = temp;
 }
 
+//힙에서 최댓값 제거
 function deleteMax() {
   if (heap.length > 2) {
     heap[1] = heap.pop();
@@ -40,6 +41,7 @@ function deleteMax() {
   }
 }
 
+//힙에 추가
 function addNumber() {
   let index = heap.length - 1;
   while (index > 1 && heap[index] > heap[Math.floor(index / 2)]) {
@@ -69,4 +71,5 @@ for (let i = 0; i < N; i++) {
   }
 }
 
+//출력
 console.log(ans.join("\n"));
