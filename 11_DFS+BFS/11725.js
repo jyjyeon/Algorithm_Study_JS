@@ -29,4 +29,4 @@ function dfsSearch(prev, curr) {
 dfsSearch(1, 1); //1의 부모 1로 설정
 
 //출력
-console.log(parent.slice([2]).join("\n")); //2번 노드부터 출력
+console.log(parent.slice(2).join("\n")); //2번 노드부터 출력
