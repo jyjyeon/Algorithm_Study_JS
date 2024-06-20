@@ -28,7 +28,7 @@ function dfs(v) {
   //2. 첫 방문이면 방문 기록
   visited[v] = 1;
   dfsResult.push(v);
-  //3. for문 돌며 녿 ㅡ방문
+  //3. for문 돌며 노드 방문
   for (let i = 0; i < graph[v].length; i++) {
     let next = graph[v][i];
     if (visited[next] === 0) {
